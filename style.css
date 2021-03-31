@@ -195,10 +195,9 @@ main p {
 
 .content-4 {
   background: url("assets/new/new_03.jpg");
-  background-repeat: no-repeat;
-  background-size: right;
-  margin: 10%;
-  margin-left: 50%;
+  background-repeat: no-repeat bottom center;
+  background-size: cover;
+  background-attachment: fixed;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -215,6 +214,7 @@ main p {
   background-size: cover;
   background-attachment: fixed;
 }
+
 /*======  ABOU ====*/
 .content-7 {
   background: url("assets/about/about_00.jpg");
@@ -222,15 +222,16 @@ main p {
   background-size: cover;
   background-attachment: fixed;
 }
+
 .content-8 {
   background: url("assets/about/about_01.jpg");
   background-size: 700px;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: local;
-
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
+
 .content-9 {
   background: url("assets/about/about_02.jpg");
   background-repeat: no-repeat;
@@ -325,66 +326,8 @@ main p {
   transform: translate(0, -100%);
 }
 
-.animated-title-s {
-  color: #000;
-  font-family: 'Dancing Script', cursive;
-  height: 100vmin;
-  left: 37%;
-  position: absolute;
-  top: 300%;
-  transform: translate(-50%, -50%);
-  width: 90vmin;
-  z-index: -1;
-}
-
-.animated-title-s>div {
-  height: 50%;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-}
-
-.animated-title-s>div div {
-  font-size: 12vmin;
-  padding: 2vmin 0;
-  position: absolute;
-}
-
-.animated-title-s>div div span {
-  display: block;
-}
-
-.animated-title-s>div.text-top {
-  border-bottom: 1vmin solid #000;
-  top: 0;
-}
-
-.animated-title-s>div.text-top div {
-  animation: showTopText 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  bottom: 0;
-  transform: translate(0, 100%);
-}
-
-.animated-title-s>div.text-top div span:first-child {
-  color: #393d2d;
-}
-
-.animated-title-s>div.text-bottom {
-  bottom: 0;
-}
-
-.animated-title-s>div.text-bottom div {
-  animation: showBottomText 0.5s;
-  animation-delay: 1.75s;
-  animation-fill-mode: forwards;
-  top: 0;
-  transform: translate(0, -100%);
-}
-
 @media all and (max-width: 768px) {
-  .animated-title .animated-title-s {
+  .animated-title {
     width: 100%;
   }
 }
@@ -477,8 +420,7 @@ footer {
 
 .footer-social-overlap {
   position: relative;
-  z-index: 1;
-  background: rgb(55, 55, 55);
+  z-index: 10;
   color: #e7f1c7;
   padding: 0 20px;
 }
@@ -675,6 +617,7 @@ footer {
   z-index: 0;
   padding: 90px 70px 50px 70px;
 }
+
 .account-login {
   font-size: 48px;
   padding-left: 11%;
@@ -825,11 +768,68 @@ footer {
 }
 
 .forget-pass .a:link {
-  color:black;
+  color: black;
   text-decoration: none;
 }
 
 .foot-lnk {
   text-align: center;
 }
+
 /*=======================US/ALL/ALL.HTML =====================*/
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  color: #000;
+  align-self: flex-start;
+  margin: 0 0 auto 0;
+  font-size: 4.5rem;
+  line-height: 1;
+  transition: all .8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s;
+  transform: translate3d(-20%, 0, 0);
+  opacity: 0;
+}
+
+h1 span.emphasis {
+  font-weight: 700;
+  font-style: italic;
+  opacity: 0;
+  transition: all .8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s;
+  transform: translate3d(-20%, 0, 0);
+  display: inline-block;
+}
+
+h1 span:not(.emphasis) {
+  font-size: 3.5rem;
+}
+
+h1+p {
+  font-family: 'Cormorand SC';
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: auto;
+  align-self: flex-end;
+  text-transform: uppercase;
+  transition: all .8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.3s;
+  transform: translate3d(-20%, 0, 0);
+  opacity: 0;
+  font-weight: 500;
+  color: #000;
+  padding-right: 8rem;
+}
+
+p.paragraph {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  color: #000;
+  width: 100%;
+  max-width: 350px;
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.4s;
+  transform: translate3d(-20%, 0, 0);
+}
